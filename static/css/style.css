@@ -15,6 +15,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; 
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-darker);
@@ -35,6 +40,24 @@ body {
     color: var(--text-light) !important;
 }
 
+
+.navbar-toggler {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5); /* Added */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* ADDED - Makes icon white */
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; 
+}
+    
+
 .navbar-nav .nav-link {
     color: var(--text-muted) !important;
     margin: 0 0.5rem;
@@ -42,6 +65,10 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
+    color: var(--text-light) !important;
+}
+
+.navbar-nav .active {
     color: var(--text-light) !important;
 }
 
@@ -353,6 +380,22 @@ body .custom {
         padding: 1rem;
         border-radius: 0.5rem;
         margin-top: 1rem;
+    }
+}
+
+@media (max-width: 489px) {
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .btn-primary-custom {
+        margin-top: -5px;
+    }
+    
+    .btn1 {
+        margin-top: 10px;
+        margin-bottom: 60px
     }
 }
 
